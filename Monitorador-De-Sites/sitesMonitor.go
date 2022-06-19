@@ -77,6 +77,6 @@ func testaSite(site string) {
 		fmt.Println()
 	} else {
 		fmt.Println("Site:", site, "tá quebrado KKK! StatusCode:", resp.StatusCode)
-		fmt.Println("")
+		fmt.Println()
 	}
 }
