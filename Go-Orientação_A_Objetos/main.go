@@ -11,7 +11,7 @@ type ContaCorrente struct {
 
 func main() {
 	contaDoWillyan := ContaCorrente{titular: "Willyan",
-		numeroAgencia: 589, numeroConta: 123456, saldo: 125.5}
+		numeroAgencia: 0001, numeroConta: 123456, saldo: 125.5}
 
 	contaDaBruna := ContaCorrente{"Bruna", 222, 111222, 200}
 
