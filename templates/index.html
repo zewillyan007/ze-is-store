@@ -10,10 +10,10 @@
         crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <title>Alura loja</title>
+    <title>Zé's Store</title>
 </head>
 <nav class="navbar navbar-light bg-light mb-4">
-    <a class="navbar-brand" href="/">Alura Loja</a>
+    <a class="navbar-brand" href="/">Barraca do Seu Zé</a>
 </nav>
 
 <body>
@@ -30,18 +30,14 @@
                         </tr>
                     </thead>
                     <tbody>
+                        {{range .}}
                         <tr>
-                            <td>Camiseta</td>
-                            <td>Bem bonita</td>
-                            <td>29</td>
-                            <td>10</td>
+                            <td>{{.Nome}}</td>
+                            <td>{{.Descricao}}</td>
+                            <td>{{.Preco}}</td>
+                            <td>{{.Quantidade}}</td>
                         </tr>
-                        <tr>
-                            <td>Notebook</td>
-                            <td>Veloz</td>
-                            <td>2050</td>
-                            <td>4</td>
-                        </tr>
+                        {{end}}
                     </tbody>
                 </table>
             </div>
