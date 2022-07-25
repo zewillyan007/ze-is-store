@@ -1,9 +1,23 @@
 package main
 
 import (
+	"database/sql"
 	"net/http"
 	"text/template"
+
+	_ "github.com/go-sql-driver/mysql"
 )
+
+//db, err := sql.Open("mysql", "user:password@/dbname")
+
+func conectionMySql() *sql.DB {
+	conexao := "user=root dbname=loja_ze password=@Willyan2014 host=localhost sslmode=disable"
+	db, err := sql.Open("mysql", conexao)
+	if err != nil {
+		panic(err.Error())
+	}
+	return db
+}
 
 type Produto struct {
 	Nome       string
@@ -15,6 +29,8 @@ type Produto struct {
 var pages = template.Must(template.ParseGlob("templates/*.html"))
 
 func main() {
+	db := conectionMySql()
+	defer db.Close()
 	http.HandleFunc("/", index)
 	http.ListenAndServe(":8000", nil)
 }
