@@ -6,7 +6,7 @@ import (
 	"ze-is-store/db"
 )
 
-var pages = template.Must(template.ParseGlob("templates/*.html"))
+var pages = template.Must(template.ParseGlob("../templates/*.html"))
 
 func main() {
 	http.HandleFunc("/", index)
