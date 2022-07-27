@@ -8,5 +8,6 @@ import (
 func GetRoutes() {
 	http.HandleFunc("/", controller.Index)
 	http.HandleFunc("/new", controller.New)
-
+	http.HandleFunc("/insert", controller.Insert)
+	http.HandleFunc("/delete", controller.Delete)
 }

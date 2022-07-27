@@ -23,6 +23,7 @@ func GetAllProduts() []model.Produto {
 			panic(err.Error())
 		}
 
+		p.Id = id
 		p.Nome = nome
 		p.Descricao = descricao
 		p.Preco = preco
